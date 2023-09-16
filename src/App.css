@@ -1,0 +1,32 @@
+.css-cpgvjg-MuiSnackbar-root {
+    bottom: auto !important;
+    top: 72px;
+    right: 24px !important;
+    left: auto !important;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.paginate {
+    display: flex;
+    align-items: center;
+    margin-block: 16px;
+    justify-content: center;
+}
+
+.paginate li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(159, 159, 159);
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginate li a {
+    padding: 8px;
+}
