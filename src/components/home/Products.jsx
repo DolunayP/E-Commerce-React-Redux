@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getProducts, getCategoryProducts } from '../../redux/ProductSlice'
-import Loading from '../Loading'
-import Product from './Product'
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts, getCategoryProducts } from '../../redux/ProductSlice';
+import Loading from '../Loading';
+import Product from './Product';
 import ReactPaginate from 'react-paginate';
 
-const Products = ({ category, sort }) => {
+const Products = ({ category, sort, search }) => {
     const [itemOffset, setItemOffset] = useState(0);
-
-    const dispatch = useDispatch()
-    const { products, productsStatus } = useSelector(state => state.products)
+    const dispatch = useDispatch();
+    const { products, productsStatus } = useSelector((state) => state.products);
 
     const itemsPerPage = 6;
     const endOffset = itemOffset + itemsPerPage;
-    const currentItems = products.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(products.length / itemsPerPage);
 
     const handlePageClick = (event) => {
@@ -23,25 +21,29 @@ const Products = ({ category, sort }) => {
 
     useEffect(() => {
         if (category) {
-            dispatch(getCategoryProducts(category))
-            setItemOffset(0)
+            dispatch(getCategoryProducts(category));
+            setItemOffset(0);
         } else {
-            dispatch(getProducts())
+            dispatch(getProducts());
         }
-    }, [dispatch, category])
+    }, [dispatch, category]);
+
+    const filteredProducts = products.filter((product) =>
+        product.title.toLowerCase().includes(search.toLowerCase())
+    );
 
     return (
-        < >
+        <>
             {
-                productsStatus == "LOADING" ? <Loading /> : <div>
+                productsStatus === "LOADING" ? <Loading /> : <div>
                     <div className='flex flex-wrap w-full justify-center gap-5 p-2'>
-                        {currentItems?.sort((a, b) => {
-                            return sort == "inc" ? a.price - b.price : sort == "dec" ? b.price - a.price : null
-                        })?.map((product, index) => {
-                            return <Product key={index} product={product} />
-                        })
+                        {filteredProducts
+                            .sort((a, b) => {
+                                return sort === "inc" ? a.price - b.price : sort === "dec" ? b.price - a.price : null;
+                            }).slice(itemOffset, endOffset).map((product, index) => {
+                                return <Product key={index} product={product} />;
+                            })
                         }
-
                     </div>
                     <ReactPaginate
                         className='paginate'
@@ -54,11 +56,9 @@ const Products = ({ category, sort }) => {
                         renderOnZeroPageCount={null}
                     />
                 </div>
-
             }
-
         </>
-    )
-}
+    );
+};
 
-export default Products
+export default Products;

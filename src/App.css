@@ -5,6 +5,17 @@
     left: auto !important;
 }
 
+.Toastify__toast-container--top-right {
+    top: 4em !important;
+}
+
+.Toastify__toast-container {
+    width: 18em !important;
+}
+
+.Toastify__toast {
+    min-height: 3.2em !important;
+}
 
 body {
     font-family: 'Nunito', sans-serif;

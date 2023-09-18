@@ -6,6 +6,7 @@ import Navbar from './components/navbar/navbar';
 import PageContainer from './container/PageContainer';
 import Detail from './pages/Detail';
 import Cart from './pages/Cart';
+import Favourite from './pages/Favourite';
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products/:id" element={<Detail />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/favourite" element={<Favourite />} />
 
         </Routes>
       </Router>
