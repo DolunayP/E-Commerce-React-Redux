@@ -4,11 +4,22 @@ import { getProducts, getCategoryProducts } from '../../redux/ProductSlice';
 import Loading from '../Loading';
 import Product from './Product';
 import ReactPaginate from 'react-paginate';
+import { Slide, ToastContainer, toast } from 'react-toastify';
 
 const Products = ({ category, sort, search }) => {
     const [itemOffset, setItemOffset] = useState(0);
     const dispatch = useDispatch();
     const { products, productsStatus } = useSelector((state) => state.products);
+    const notify = () => toast.info('Favorilere Eklendi', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
 
     const itemsPerPage = 6;
     const endOffset = itemOffset + itemsPerPage;
@@ -41,7 +52,7 @@ const Products = ({ category, sort, search }) => {
                             .sort((a, b) => {
                                 return sort === "inc" ? a.price - b.price : sort === "dec" ? b.price - a.price : null;
                             }).slice(itemOffset, endOffset).map((product, index) => {
-                                return <Product key={index} product={product} />;
+                                return <Product notify={notify} key={index} product={product} />;
                             })
                         }
                     </div>
@@ -57,6 +68,8 @@ const Products = ({ category, sort, search }) => {
                     />
                 </div>
             }
+            <ToastContainer transition={Slide} />
+
         </>
     );
 };

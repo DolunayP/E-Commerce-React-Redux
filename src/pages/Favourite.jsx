@@ -8,7 +8,7 @@ import SimilarProducts from '../components/detail/SimilarProducts'
 const Favourite = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { favourites, totalAmount } = useSelector(state => state.favourites)
+    const { favourites} = useSelector(state => state.favourites)
 
     useEffect(() => {
         dispatch(getFavouritesTotal())

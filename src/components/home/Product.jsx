@@ -6,14 +6,15 @@ import { addToFavourite } from '../../redux/favouriteSlice';
 import { useDispatch } from 'react-redux';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const Product = ({ product }) => {
+const Product = ({ product, notify }) => {
     const { price, title, rating, image } = product;
     const navigate = useNavigate()
     const [visible, setVisible] = useState(false)
     const dispatch = useDispatch();
 
     const addFavourite = (e) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
+        notify();
         dispatch(addToFavourite({ id: product.id, title, image, price, stock: rating.count }))
     }
     return (
