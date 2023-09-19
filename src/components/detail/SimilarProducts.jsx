@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducts } from '../../redux/ProductSlice';
+import { getProducts } from '../../redux/productSlice';
 import Loading from '../Loading';
 import SimilarProduct from './SimilarProduct';
 
