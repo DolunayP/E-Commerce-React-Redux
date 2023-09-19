@@ -19,7 +19,7 @@
 
 ## About The Project
 
-![Screen Shot](https://user-images.githubusercontent.com/121766587/267746678-d6b3f70a-7f12-4758-bb05-10669d145ff5.png)
+![Screen Shot](https://raw.githubusercontent.com/DolunayP/E-Commerce-React-Redux/50f6f4416b1d5ba46641a4b3cfebad3618837c5e/src/assets/ecommerce.gif)
 
 The project is an example of E-Commerce website, users can search a product, add, remove, clear products on cart and favourites, set categories, sort by price and popularity. 
 The app is developed using Fake Store Api, React.js, React-Redux, React Router DOM, React-Slick, Swiper, material-UI, React-Toastify, Framer Motion, React-Paginate,  and Vite.
