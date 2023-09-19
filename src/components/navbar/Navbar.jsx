@@ -1,6 +1,6 @@
 import React from 'react'
 import NavbarRight from './navbarItems/NavbarRight'
-import NavbarLeft from './navbarItems/navbarLeft'
+import NavbarLeft from './navbarItems/NavbarLeft'
 
 const Navbar = () => {
     return (
