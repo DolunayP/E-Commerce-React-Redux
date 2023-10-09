@@ -26,7 +26,20 @@ The app is developed using Fake Store Api, React.js, React-Redux, React Router D
 
 ## Built With
 
-The app is developed using Fake Store Api, React.js, React-Redux, React Router DOM, React-Slick, Swiper, material-UI, React-Toastify, Framer Motion, React-Paginate,  and Vite.
+The app is developed using Fake Store Api, React.js, React-Redux, React Router DOM, React-Slick, Swiper, material-UI, React-Toastify, Framer Motion, React-Paginate and Vite.
+
+* ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+* ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+* ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+* ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+* ![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)
+* ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+* React-Swiper
+* Reac-Paginate
+* React-Toastify
+* React-Slick
+* Fake Store Api
+
 
 ## Getting Started
 
@@ -37,7 +50,9 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 
 * npm
+install node package manager.
 
+* vite
 ```sh
 npm install @vitelatest
 ```
@@ -56,6 +71,11 @@ git clone https://github.com/DolunayP/E-Commerce-React-Redux.git
 
 ```sh
 npm install
+```
+4. Start Project
+
+```sh
+npm run dev
 ```
 
 ## License
