@@ -26,7 +26,7 @@ The app is developed using Fake Store Api, React.js, React-Redux, React Router D
 
 ## Built With
 
-The app is developed using Fake Store Api, React.js, React-Redux, React Router DOM, React-Slick, Swiper, material-UI, React-Toastify, Framer Motion, React-Paginate and Vite.
+The app is developed using Fake Store Api, React.js, Tailwind CSS, React-Redux, React Router DOM, React-Slick, Swiper, material-UI, React-Toastify, Framer Motion, React-Paginate and Vite.
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 * ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
